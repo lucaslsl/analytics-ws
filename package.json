@@ -1,0 +1,27 @@
+{
+  "name": "analytics-ws",
+  "version": "0.0.0",
+  "description": "Analytics module to track events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucaslsl/analytics-ws.git"
+  },
+  "keywords": [
+    "analytics",
+    "web",
+    "sockets"
+  ],
+  "dependencies": {
+    "socket.io-client": "~1.3.5"
+  },
+  "author": "Lucas Lima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucaslsl/analytics-ws/issues"
+  },
+  "homepage": "https://github.com/lucaslsl/analytics-ws"
+}
