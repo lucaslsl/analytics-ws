@@ -3,25 +3,31 @@
 module.exports = {
 
 
-	connect: function(host, callback){
-		// Connects to a websocket server
-	}
+	// connect: function(host, callback){
+	// 	// Connects to a websocket server
+	// 	var socket = require('socket.io-client')(host);
+	// }
 
-	track: function(event, callback){
+	// track: function(event, callback){
 
-		// Receives an object/event and then pushes it to an array
-		if(event!=undefined){
-			eventsTracked.push(event);
+	// 	// Receives an object/event and then pushes it to an array		
+
+	// }
+
+	// send: function(callback){
+
+	// }
+
+	send: function(data, host, callback){
+		var socket = require('socket.io-client')(host);
+		socket.on('connect', function(){
+			socket.emit('data', JSON.stringify(data));
+		});
+
+		if (typeof callback === "function") {
+			callback(data);		
 		}
-		callback(event);
 
-	}
-
-	send: function(callback){
-
-		if(connection){
-			// If connected, sends eventsTracked to the websocket server
-		}
 
 	}
 
